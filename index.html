@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<title>voided</title>
+
+	<link rel="stylesheet" href="./outsiders/bootstrap.min.css">
+	<script src="./outsiders/jquery-3.5.1.min.js"></script>
+	<script src="./voided.js"></script>
+</head>
+<body>
+	<h1>Welcome to voided</h1>
+	We are using Node.js <span id="node-version"></span>,
+	Chromium <span id="chrome-version"></span>,
+	and Electron <span id="electron-version"></span>.
+
+	<button>Hello</button>
+	<input>Test</input>
+	<input type='file'/>
+
+	<span id="date-time"></span>
+
+	<div id="container" class="container-fluid">
+		<!-- Input row -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+				<h3 class="hash-heading">Input</h3>
+				<textarea rows="2" id="text-input" class="form-control text-input" placeholder="Enter text and see it hashed..."></textarea>
+			</div>
+		</div>
+
+		<!-- MD5 row -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3 class="hash-heading">MD5</h3>
+				<pre id="md5-output" class="hash-output"> </pre>
+			</div>
+		</div>
+
+		<!-- SHA-1 row -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3 class="hash-heading">SHA-1</h3>
+				<pre id="sha1-output" class="hash-output"> </pre>
+			</div>
+		</div>
+
+		<!-- SHA-256 row -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3 class="hash-heading">SHA-256</h3>
+				<pre id="sha256-output" class="hash-output"> </pre>
+			</div>
+		</div>
+
+		<!-- SHA-512 row -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3 class="hash-heading">SHA-512</h3>
+				<pre id="sha512-output" class="hash-output"> </pre>
+			</div>
+		</div>
+	</div>
+
+	<!-- You can also require other files to run in this process -->
+	<script src="./renderer.js"></script>
+</body>
+</html>
